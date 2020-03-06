@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>160410116114 Calculator</title>
+    <link rel="stylesheet" href="P10.css">
+    <script>
+        function valueb(a)
+        {
+            document.getElementById("t1").value=f1.t1.value+a;
+        }
+        function cleartext()
+        {
+            document.getElementById("t1").value="";
+        }
+        function ans()
+        {
+            document.getElementById("t1").value=eval(document.getElementById("t1").value);
+        }
+        function backspace1()
+        {
+            var b=document.getElementById("t1").value;
+            document.getElementById("t1").value=b.substring(0,b.length-1);
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form id="f1">
+            <fieldset>
+                <legend>Calculator</legend>
+                <table>
+                    <tr>
+                        <td colspan="5">
+                            <input class="inputtext" type="text" id="t1" placeholder="Input Here">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="size" type="button" name="b1" value="1" onclick="valueb(1)"></td>
+                        <td><input class="size" type="button" name="b2" value="2" onclick="valueb(2)"></td>
+                        <td><input class="size" type="button" name="b3" value="3" onclick="valueb(3)"></td>
+                        <td><input class="size" type="button" name="b4" value="CE" onclick="cleartext()"></td>
+                        <td><input class="size" type="button" name="b5" value="BK" onclick="backspace1()"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="size" type="button" name="b1" value="4" onclick="valueb(4)"></td>
+                        <td><input class="size" type="button" name="b2" value="5" onclick="valueb(5)"></td>
+                        <td><input class="size" type="button" name="b3" value="6" onclick="valueb(6)"></td>
+                        <td><input class="size" type="button" name="b4" value="/" onclick="valueb('/')"></td>
+                        <td><input class="size" type="button" name="b5" value="*" onclick="valueb('*')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="size" type="button" name="b1" value="7" onclick="valueb(7)"></td>
+                        <td><input class="size" type="button" name="b2" value="8" onclick="valueb(8)"></td>
+                        <td><input class="size" type="button" name="b3" value="9" onclick="valueb(9)"></td>
+                        <td rowspan="2"><input class="sizeplus" type="button" name="b4" value="+" onclick="valueb('+')"></td>
+                        <td><input class="size" type="button" name="b5" value="-" onclick="valueb('-')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="size" type="button" name="b1" value="0" onclick="valueb(0)"></td>
+                        <td><input class="size" type="button" name="b2" value="00" onclick="valueb(0+''+0)"></td>
+                        <td><input class="size" type="button" name="b3" value="%" onclick="valueb('%')"></td>
+                        <td><input class="size" type="button" name="b5" value="=" onclick="ans()"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </center>
+</body>
+
+</html>
